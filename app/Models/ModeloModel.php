@@ -4,17 +4,18 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class MarcaModel extends Model
+class ModeloModel extends Model
 {
-    protected $table      = 'tb_marca';
-    protected $primaryKey = 'TB_MARCA_ID';
+    protected $table      = 'tb_modelo';
+    protected $primaryKey = 'TB_MODELO_ID';
 
     protected $useAutoIncrement = true;
 
     protected $returnType     = 'array';
     protected $useSoftDeletes = false;
 
-    protected $allowedFields = ['TB_MARCA_ID', 'TB_MARCA_NOME'];
+    protected $allowedFields = ['TB_MODELO_ID', 'TB_MODELO_DESC', 
+                                'TB_MODELO_OBS', 'TB_MODELO_DATA'];
 
     protected $useTimestamps = false;
     protected $createdField  = 'created_at';
@@ -24,4 +25,5 @@ class MarcaModel extends Model
     protected $validationRules    = [];
     protected $validationMessages = [];
     protected $skipValidation     = false;
+
 }
